@@ -7,3 +7,8 @@ __pycache__/
 
 # Ignore virtual environment folders
 venv/
+
+# Ignore all CSV files in the data folder and subfolders
+data/**/*.csv
+
+.ipynb_checkpoints/
