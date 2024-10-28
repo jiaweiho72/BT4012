@@ -1,4 +1,4 @@
-# Transaction Fraud Detection Project
+# Credit Card Transaction Fraud Detection
 
 ## Project Overview
 The objective of this project is to detect fraudulent transactions within a highly imbalanced dataset. The dataset consists of transaction records labeled as fraud (`1`) or non-fraud (`0`).
