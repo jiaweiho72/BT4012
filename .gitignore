@@ -9,8 +9,6 @@ __pycache__/
 venv/
 
 # Ignore all CSV files in the data folder and subfolders
-# data/**/*.csv
-data/raw/*.csv
-data/processed/*.csv
+data/**/*.csv
 
 .ipynb_checkpoints/
