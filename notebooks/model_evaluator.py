@@ -46,7 +46,7 @@ class ModelEvaluator:
         
 
     # ------------------------------ Evaluation ------------------------------
-    def evaluate_model(self, model_name, y_actual, y_pred, y_pred_prob=None, dataset_name='Test'):
+    def evaluate_model(self, model_name, y_actual, y_pred, y_pred_prob=None, y_pred_dec=None, dataset_name='Test'):
         """
         Evaluates the model based on the actual and predicted labels or values,
         appends or updates results in the internal DataFrame, and returns the metrics as a one-row DataFrame.
@@ -62,6 +62,10 @@ class ModelEvaluator:
         - pd.DataFrame: A one-row DataFrame containing all evaluation metrics for the model.
                         The model name is set as the index.
         """
+        # If y_pred_prob is None, initialise it with y_pred_dec instead
+        if y_pred_prob is None:
+            y_pred_prob = y_pred_dec
+            
         # Initialize metrics dictionary with None
         metrics = {col: None for col in self.results_df.columns}
         metrics.update({'Model': model_name, 'Dataset': dataset_name})
