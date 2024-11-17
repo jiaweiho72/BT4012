@@ -6,3 +6,4 @@ imblearn
 geopy
 tqdm
 xgboost
+feature-engine
