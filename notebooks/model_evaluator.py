@@ -41,7 +41,7 @@ class ModelEvaluator:
 
         # Initialize a list to store outputs for plotting later
         self.model_outputs = []
-        self.FIGURE_SIZE = (7,5)
+        # self.FIGURE_SIZE = (7,5)
 
         
 
@@ -183,15 +183,16 @@ class ModelEvaluator:
         if curve_type not in ['roc', 'precision_recall']:
             raise ValueError("curve_type must be either 'roc' or 'precision_recall'")
 
-        plt.figure(figsize=self.FIGURE_SIZE)
+        # plt.figure(figsize=self.FIGURE_SIZE)
+        plt.figure()
         colors = cm.tab10.colors  # Use tab10 colormap for distinct colors
         color_idx = 0  # Initialize color index
 
-        # Baseline lines
-        if curve_type == 'roc':
-            plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--', label='Random Classifier')
-        elif curve_type == 'precision_recall':
-            plt.plot([0, 1], [1, 0], color='navy', lw=2, linestyle='--', label='Baseline')
+        # # Baseline lines
+        # if curve_type == 'roc':
+        #     plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--', label='Random Classifier')
+        # elif curve_type == 'precision_recall':
+        #     plt.plot([0, 1], [1, 0], color='navy', lw=2, linestyle='--', label='Baseline')
 
         # Iterate over model outputs and plot accordingly
         for output in self.model_outputs:
@@ -268,7 +269,8 @@ class ModelEvaluator:
             title = 'Precision-Recall Curves' + (f' for {dataset_name} Set' if dataset_name else ' for All Datasets')
 
         plt.title(title, fontsize=16)
-        plt.legend(loc='lower right', fontsize=10)
+        # plt.legend(loc='lower right', fontsize=10)
+        plt.legend(bbox_to_anchor=(1.04, 1), loc="upper left")
         plt.grid(True)
         plt.show()
 
