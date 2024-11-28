@@ -37,9 +37,9 @@ The objective of this project is to build Machine Learning models that can accur
 - `notebooks/02_preprocessing_fe.ipynb`: Data Preprocessing & Feature Engineering
 - `notebooks/03_modelling.ipynb`: Model Building, Tuning, and Evaluation
 - `notebooks/model_evaluator.py`: Custom evaluator module for model evaluation
-- `data/raw`: Original datasets from Kaggle
-- `data/preliminary`: Datasets produced after Resampling & Dataset Splitting
-- `data/processed`: Datasets produced after Data Preprocessing & Feature Engineering
+- `data/raw`: To contain the original datasets from [Kaggle](https://www.kaggle.com/datasets/kartik2112/fraud-detection)
+- `data/preliminary`: To contain the datasets produced after Resampling & Dataset Splitting (`notebooks/01_sampling.ipynb`)
+- `data/processed`: To contain the datasets produced after Data Preprocessing & Feature Engineering (`notebooks/02_preprocessing_fe.ipynb`)
 
 ## Installing Dependencies
 
